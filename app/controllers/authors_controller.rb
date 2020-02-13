@@ -7,7 +7,7 @@ class AuthorsController < ApplicationController
   end
 
   def create
-    if author_params.valid?
+    if author_params
       @author = Author.create!(author_params)
       redirect_to author_path(@author)
     else
